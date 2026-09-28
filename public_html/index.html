@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--Inicio del HTML-->
+<html lang="es">
+    <!--Inicio del encabezado-->
+<head>
+    <!--Codificacion de caracteres en protocolo UTF-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo de la pagina web-->
+    <title>Sistema de Calificaciones</title>
+    <!--Linkear estilos con la página CSS-->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<!--Final del encabezado e nicio del cuerpo de la pagina WEB-->
+<body>
+    <!--Primer div que es el espacio general donde se establece la tabla donde se encuentra el formulario-->
+    <div class="contenedor">
+        <!--Titulo del formulario-->
+        <h1>Sistema de Calificaciones</h1>
+        <!--texto con indicaciones-->
+        <p>Captura las calificaciones del alumno</p>
+
+        <!--Siguiente div en donde se encuentra el contenido del formulario-->
+        <div class="formulario">
+            <!--El label es un texto que esta asociado con un elemento del formluario
+            Al hacer click sobre el texto te manda al elemento con el que esta relacionado
+            En este caso esta vinculado con "nombre"-->
+            <label for="nombre">Nombre del alumno:</label>
+            <!--Aqui esta el elemento del formulario "nombre"
+            Es el que recoge la infomación que le introduzcas
+            Tiene id "nombre", recoge texto y en el recuadro aparecera lo que escribas en "placeholder"-->
+            <input type="text" id="nombre" placeholder="Escribe el nombre">
+            
+            <label for="edad">Edad del alumno:</label>
+            <input type="number" id="edad" min="0" max="156" placeholder="Escribe la edad">
+            
+            <!--Mismo formato de elementos del formulario para las calificaciones-->
+            <label for="calificacion1">Calificación 1:</label>
+            <input type="number" id="calificacion1" min="0" max="10">
+
+            <label for="calificacion2">Calificación 2:</label>
+            <input type="number" id="calificacion2" min="0" max="10">
+
+            <label for="calificacion3">Calificación 3:</label>
+            <input type="number" id="calificacion3" min="0" max="10">
+            
+            <label for="calificacion4">Calificación 4:</label>
+            <input type="number" id="calificacion4" min="0" max="10">
+            
+            <!--Boton con el texto "Calcular promedio", con la funcion "calcularPromedio()" al hacer click-->
+            <button onclick="calcularPromedio()">
+                Calcular promedio
+            </button>
+            
+            <button onclick="limpiarCuestionario()">
+               Limpiar cuestionario 
+            </button>
+        </div>
+        <!--Siguiente div que separa el apartado donde se muestra el resultado de calcular el promedio-->
+        <div id="resultado" class="resultado">
+        </div>
+        <div class="seccionlista">
+            <h2>Lista de Alumnos Guardados</h2>
+            <table id="tablaAlumnos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button onclick="borrarLista()" style="background-color: #dc3545; margin-top: 15px;">
+                Borrar Todos los Alumnos</button>
+        </div>
+    </div>
+    <!--Vinculación con el script para funciones y dinamismo-->
+    <script src="script.js"></script>
+    <!--Fin del cuerpo de la pagina web-->
+</body>
+<!--Fin del HTML-->
+</html>

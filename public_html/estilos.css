@@ -1,0 +1,93 @@
+/*El asterisco es un selector de todos los elementos estableciendo el borde de una table*/
+* {
+    box-sizing: border-box;
+}
+/*Body afecta a todos los elementos del cuerpo
+Aqui se establece el tipo de letra (Arial, sans serif)
+Tambien se establece el color del fondo y margenes*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+/*Tamaños del div general de toda la tabla del formulario
+Se establece el tamaño de esta, margen, color de fondo, relleno, radio del borde y sombras del borde */
+.contenedor {
+    width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2)
+    ;
+}
+/*Alineacion y espacio de separacion con otros elementos*/
+h1, h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 20px;
+    margin-top: 30px;
+}
+/*alineacion y color del texto con instrucciones*/
+p {
+    text-align: center;
+    color: #666;
+}
+/*Direccion y manera en la que aparece el contenido del formulario*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+/*Fuente y acomodamiento de los textos que estan vinculados a los elementos del formulario*/
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+/*Acomodacion y bordes de los elementos del formulario*/
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/*Margen, color de la letra y fondo, bordes, tamaño y acomodamiento del boton*/
+button {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*Cambiar el color del boton cuanto lo apuntas con el cursor*/
+button:hover {
+    background-color: #0056b3;
+}
+/*Margen, bordes y acomodamiento del texto del resultado */
+.resultado {
+    margin-top: 25px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+th {
+    background-color: #e9ecef;
+}
